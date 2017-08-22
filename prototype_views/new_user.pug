@@ -1,0 +1,17 @@
+html
+	head
+		title New User
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+	body
+		form(action = "", method = "POST")
+			label(for = "first_name", class = "new_user_text") First Name:
+			input(type = "text" name = "first_name")
+			label(for = "last_name", class = "new_user_text") Last Name:
+			input(type = "text", name = "last_name")
+			label(for = "password", class = "new_user_text") Password:
+			input(type = "text", name = "password")
+			label(for = "age", class = "new_user_text") Age:
+			input(type = "text", name = "age")
+			br
+			input(type = "submit", value = "Submit Info")
+

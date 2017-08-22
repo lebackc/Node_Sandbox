@@ -1,0 +1,19 @@
+html
+	head
+		title New Booking
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+		script(src = "https://code.jquery.com/jquery-3.2.1.min.js",
+			integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",
+			crossorigin = "anonymous")
+	body
+		div
+			h1 New booking for 
+			form(action = "", method = "POST")
+				label(for = "service_type", class = "")
+				input(type = "drop", name = "service_type")
+				label(for = "date", class = "")
+				input(type = "text", name = "date")
+				label(for = "time_start", class = "")
+				input(type = "drop", name = "time_start")
+				label(for = "time_end", class = "")
+				input(type = "drop", name = "time_end")

@@ -1,0 +1,8 @@
+html
+	head
+		title New Booking Confirmation
+	body
+		if (type == "error")
+			h3(style = "color:red") #{message}
+		else
+			h3 New Booking Made by: #{user.first_name} #{user.last_name}, age: #{user.age}

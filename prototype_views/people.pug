@@ -1,0 +1,15 @@
+html
+	head
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+	body
+		ul
+			for item in people.users
+				li
+					a(href= "/person/find?id=" + item._id, target = "_top") #{item.name}
+
+					br
+
+
+		if people.users.length == 5
+		
+			a(href = "/people?start=" + (start + 5), target = "_top") Next

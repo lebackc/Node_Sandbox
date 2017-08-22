@@ -1,0 +1,24 @@
+html
+	head
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+	body
+		ul
+			for item in people.users
+				li
+					a(href= "/find_id/" + item._id, target = "_top") #{item.name}
+
+					br
+
+
+		if people.paging.prev >= 0
+
+			br
+
+			a(href = "/id?start=" + people.paging.prev, target = "_top") Prev
+
+
+		if people.paging.next > 0
+
+			br
+
+			a(href = "/id?start=" + people.paging.next, target = "_top") Next

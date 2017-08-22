@@ -1,0 +1,77 @@
+body {
+	background-image:url("https://www.destructoid.com/ul/312285-review-destiny-the-taken-king/DDT-noscale.jpg");
+	background-attachment:fixed;
+	background-size:100%;
+	background-visibility:;
+}
+
+h1 {color:aqua;
+	letter-spacing:4pt;
+	font-variant:small-caps;
+	text-shadow:4pt 4pt 4pt;
+	margin:10pt; 
+}
+
+a:link {
+	color:blue;
+}
+
+a:visited {
+	color:purple;
+}
+
+a:hover {
+	color:yellow;
+}
+
+a:active {
+	color:green;
+}
+
+body > div {
+	color:orange;
+	font-family:Comic Sans MS, cursive, sans-serif;
+	font-size:16pt;
+	font-weight:bold;
+	font-style:italic;
+	margin:10pt;
+}
+
+#img1 {
+	position:absolute;
+	height:50%;
+	opacity:.5;
+}
+
+#emblemPt1 {
+	position:absolute;
+	top:300pt;
+	left:120pt;
+	height:50pt;
+	width:100pt;
+	background-color:grey;
+}
+
+#emblemPt2 {
+	position:absolute;
+	top:275pt;
+	left:145pt;
+	height:100pt;
+	width:50pt;
+	background-color:grey;
+}
+
+#emblemPt3 {
+
+}
+
+#emblemPt4 {
+
+}
+
+.gender_label {
+	font-family:Comic Sans MS, cursive, sans-serif;
+	font-size:16pt;
+	font-weight:bolder;
+	color:orange;
+}

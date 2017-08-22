@@ -1,0 +1,25 @@
+html
+	head
+		title Sign In
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+	body
+		div
+			script.
+				let myStorage = window.localStorage;
+				let booking_date = window.location.search;
+				booking_date = booking_date.substring(6);
+				myStorage.setItem("test", new Date(parseInt(booking_date)));
+				document.write(myStorage.getItem("test"));
+			form(action = "", method = "POST")
+				label(for = "first_name", class = "sign_in_text") First Name: 
+				input(type = "text", name = "first_name")
+				label(for = "last_name", class = "sign_in_text") Last Name: 
+				input(type = "text", name = "last_name")
+				label(for = "password", class = "sign_in_text") Password:
+				input(type = "text", name = "password")
+				br
+				input(type = "submit", value = "Submit")
+			p Don't have profile? Create one 
+				a(href = "/new_user", style = "color:blue") here! 
+		
+

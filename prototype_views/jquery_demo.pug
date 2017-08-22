@@ -1,0 +1,38 @@
+html
+	head
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+		script(src = "https://code.jquery.com/jquery-3.2.1.min.js",
+			integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",
+			crossorigin = "anonymous")
+	body
+		div(id = "div1", style = "width:100%")
+			h1 JQuery Demo Page
+			p Here is some random text!
+			input(type = "button", id = "button1", value = "Spongify")
+
+		script.
+			function init() {
+				let sponge = $("<img />",{"src":"http://nick-intl.mtvnimages.com/uri/mgid:file:gsp:scenic:/international/nick-dev/images/intl-video-thumbs/SB_Golden_Krabby_Patty_Stunt/SB-Gold-Moments/INCHD1542-26/INCHD1542-26_thumbnails_1124x768.jpg?quality=0.75&height=360&width=480&matte=true&crop=true"});
+				sponge.css({"position":"absolute", "right": "-50%", "top":"70px"});
+				$("#button1").click(function(){
+					$("#div1 > p").css({"position":"absolute", "left":"-50%"});
+					$("#div1").append(sponge);
+					$("#div1 > h1").css({"position":"absolute","bottom":"-10%", "color":"yellow", "font-size":"40pt", "text-shadow":"3px 3px 3px black", "left":"35%"});
+					$("#div1 > p").text(function(i, origText){
+						return "Old Text: " + origText + " New Text: Elliott Rocks!";
+					});
+					$(this).attr("value", "I'm ready!");
+					$("#div1 > h1").animate({
+						top: "1%"						
+					}, "slow");
+					sponge.delay(450).animate({
+						left: "35%"
+					}, "slow");
+					$("#div1 > p").delay(700).animate({
+						left: "35%",
+						bottom: "30%"
+					}, "slow");
+					//alert($("#div1 > p").attr("style"));
+				});
+			}
+			document.ready(init());

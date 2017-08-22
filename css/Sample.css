@@ -1,0 +1,280 @@
+body {
+  background-image: url("http://pre01.deviantart.net/97cf/th/pre/f/2015/175/d/5/d5dca228bf2fedd4726b7b4456050484-d8ykc5z.png");
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: yellow;
+}
+
+a:active {
+  color: green;
+}
+
+body > p {
+  color: black;
+}
+
+div > p {
+  color: maroon;
+}
+
+input[type="radio"] {
+  color: blue;
+}
+
+input[type="text"] {
+  color: red;
+  text-transform="uppercase";
+}
+
+.black {
+  color: black;
+}
+
+#black {
+  color: yellow;
+}
+
+h2.black {
+  color: red;
+}
+
+#black h3 {
+  color: green;
+}
+
+h3#black {
+  color: purple;
+}
+
+#div1 {
+  font-family:Comic Sans MS, cursive, sans-serif;
+  font-style:italic;
+  font-weight:bold;
+  text-shadow: 4pt 4pt 6pt lavender;
+}
+
+#div2 {
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bolder;
+  font-size:2em;
+}
+
+#div3 {
+  letter-spacing: 5px;
+  text-align: left;
+  font-variant: small-caps;
+}
+
+#div4 {
+  font-size: 2em;
+  text-decoration: blink;
+  text-shadow: 6pt 6pt 5pt purple;
+  margin-top: 24pt;
+  margin-bottom: 4pc;
+}
+
+#div5 {
+  background-color: white;
+  white-space: pre;
+  margin-top: 5%;
+  position: relative;
+}
+
+#img1 {
+  border: 10px double black; /*dotted, dashed, solid, double, groove, ridge, inset, outset */
+  -moz-opacity:0.1;
+  filter: alpha(opacity =001);
+  opacity: .7;
+}
+
+#img2 {
+  -moz-opacity:0.1;
+  filter: alpha(opacity =001);
+  opacity: .5;
+}
+
+caption.top {caption-side: top}
+caption.bottom {caption-side: bottom}
+caption.left {caption-side: left}
+caption.right {caption-side: right}
+
+#top_cap {
+  caption-side: top;
+}
+
+#table1 {
+  color: purple;
+  border-collapse: separate;
+  border-top-style: ridge;
+  border-bottom-style: groove;
+  border-left-style: double;
+  border-right-style: double;
+  border-width: 4px;
+  border-spacing: 20px;
+  table-layout: auto;
+}
+
+#z_div1 {
+  height: 100px;
+  width: 200px;
+  background-color: red;
+  z-index: 1;
+  position: relative;
+}
+
+#z_div2 {
+  height: 200px;
+  width: 100px;
+  background-color: yellow;
+  z-index: 2;
+  position: relative;
+  top: -200px;
+}
+
+#z_div3 {
+  height: 200px;
+  width: 100px;
+  background-color: green;
+  z-index: 3;
+  position: relative;
+  top: -300px;
+}
+
+#z_div4 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  top: -500px;
+  z-index: 4;
+  margin-bottom: -400px;
+}
+
+li.li_a {
+  list-style-type: lower-roman;
+  color: green;
+}
+
+li.li_b {
+  list-style-type: upper-alpha;
+  font-size: 15pt;
+  font-weight: 100;
+}
+
+li.li_c {
+  list-style-type: decimal;
+  font-variant: small-caps;
+  font-size: 20pt;
+}
+
+#list1 {
+  list-style-type: lower-alpha;
+  list-style-position: outside;
+  marker-offset: 2em;
+}
+
+p.para_a {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 16pt;
+  color: gold;
+  font-weight: bold;
+  background-color: white;
+  padding-left: 20px;
+  margin: 20px;
+}
+
+p.para_b {
+  font-family: Comic Sans MS, cursive, sans-serif;
+  font-size: 16pt;
+  color: skyblue;
+  font-weight: bolder;
+  background-color: purple;
+  margin: 30px;
+}
+
+p.para_c {
+  font-family: Lucida Console, Monaco, monospace;
+  font-size: 20pt;
+  color: violet;
+  font-weight: 600;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+p.para_d {
+  font-size: 16pt;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  color: purple;
+  background-color: grey;
+  margin: auto;
+  width: 400px;
+  min-height: 200px;
+  line-height: 50px;
+  padding: 20px;
+}
+
+p.para_e {
+  font-size: 20pt;
+  font-weight: bold;
+  max-width: 400px;
+  max-height: 100px;
+  overflow: auto;
+  background-color: white;
+  position: relative;
+  left: 300px;
+}
+
+p.para_f {
+  font-size: 20pt;
+  font-weight: bold;
+  max-width: 400px;
+  max-height: 100px;
+  overflow: auto;
+  background-color: white;
+  position: absolute;
+  left: 200px;
+  top: 5px;
+}
+
+p::after {
+  content: " - Elliott";
+  color: blue;
+  font-style: italic;
+}
+
+p:first-child {
+  color: green !important;
+}
+
+p:first-of-type {
+  color: red;
+  font-size: 20pt;
+}
+
+p:last-child {
+  color: yellow;
+  font-size: 15pt;
+}
+
+#p_greeting {
+  voice-family: paul;
+  stress: 20;
+  richness: 90;
+}
+
+#p_greeting {
+  azimuth: center-right;
+}

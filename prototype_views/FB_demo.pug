@@ -1,0 +1,86 @@
+html
+	head
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+		script(src = "https://code.jquery.com/jquery-3.2.1.min.js",
+			integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",
+			crossorigin = "anonymous")
+	body
+		script.
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId: "461362490897343",
+					autoLogAppEvents: true,
+					xfbml: true,
+					status: true,
+					oauth: true,
+					version: 'v2.10'
+				});
+				
+				FB.AppEvents.logPageView();
+
+				/*FB.login(function(response) {
+				    if (response.authResponse) {
+				     console.log('Welcome!  Fetching your information.... ');
+				     FB.api('/me', function(response) {
+				       console.log('Good to see you, ' + response.name + '.');
+				     });
+				    } else {
+				     console.log('User cancelled login or did not fully authorize.');
+				    }
+				});*/
+
+				FB.getLoginStatus(function(response) {
+				  if (response.status === 'connected') {
+				    // the user is logged in and has authenticated your
+				    // app, and response.authResponse supplies
+				    FB.api(
+				        "/238529783227920/picture",
+				        function (response) {
+				          if (response && !response.error) {
+				            console.log(response);
+				            let $cover_pic = $("<img />", {"src":response.data.url});
+				          	$("body").append($cover_pic);
+				          }
+				      	  else {
+				      	  	console.log("error loading album...")
+				      	  }
+				        }
+				    );
+				    // the user's ID, a valid access token, a signed
+				    // request, and the time the access token 
+				    // and signed request each expire
+				    var uid = response.authResponse.userID;
+				    var accessToken = response.authResponse.accessToken;
+				  } else if (response.status === 'not_authorized') {
+				    // the user is logged in to Facebook, 
+				    console.log("not auth");
+				    // but has not authenticated your app
+				  } else {
+				    // the user isn't logged in to Facebook.
+				   console.log("not logged");
+				  }
+				 });
+				
+
+				/*FB.ui({
+				  method: 'share',
+				  href: 'https://developers.facebook.com/docs/',
+				}, function(response){});*/
+
+				};
+
+				(function(d, s, id){
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) {return;}
+					js = d.createElement(s); js.id = id;
+					js.src = "http://connect.facebook.net/en_US/sdk.js";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+
+		
+		//-div(class="fb-like",
+			data-share="true",
+			data-width="450",
+			data-show-faces="true")
+
+//-461362490897343|6vQsyI4JSS1ru9-bALQxDbDqqhw

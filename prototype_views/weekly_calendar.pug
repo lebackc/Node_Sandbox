@@ -1,0 +1,12 @@
+html
+	head
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+		script(type = "text/javascript", src = "/weekly_calendar2.js")
+	body
+		
+		script.
+			let cal = new WeeklyCalendar("#{week_start_ts}");
+			cal.generateHTML();
+			document.write(cal.getHTML());
+
+		

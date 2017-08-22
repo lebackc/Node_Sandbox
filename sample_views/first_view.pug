@@ -1,0 +1,43 @@
+html
+	head
+		title #{name}
+		link(rel = "stylesheet", href = "/css/home.css")
+	body
+		h1 #{title}
+		
+		hr
+		
+		a(href = url) #{text}
+		
+		include ./header.pug
+		
+		div.
+			This is a block of text to denote the use of the '.'
+			block indicator!
+		
+		if(user)
+			h1 HI, #{user.name}
+		else
+			a(href = url) Sign Up
+		
+		//img(src = "https://www.destructoid.com/ul/312285-review-destiny-the-taken-king/DDT-noscale.jpg", id = "img1")
+
+		form(action = '', method = "POST", name = "form1" )
+			input(type = "text", name = "sample_input")
+			input(type = "submit", value = "Submit")
+
+		div(id = "emblemPt1")
+
+		div(id = "emblemPt2")
+
+		div(id = "emblemPt3")
+
+		div(id = "emblemPt4")
+
+		label(for = "male", class= "gender_label") Male
+		input(type = "radio", value = "Male", name = "gender")
+
+		br
+
+		label(for = "female", class = "gender_label") Female
+		input(type = "radio", value = "Female", name = "gender")

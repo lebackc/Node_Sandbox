@@ -1,0 +1,10 @@
+html
+	head
+		link(rel = "stylesheet", type = "text/css", href = "/css/prototype_stylesheet.css")
+		script(type = "text/javascript", src = "/monthly_calendar.js")
+	body
+		
+		script.
+			let cal = new MonthlyCalendar("#{month_start_ts}");
+			cal.generateHTML();
+			document.write(cal.getHTML());
