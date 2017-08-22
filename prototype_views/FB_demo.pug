@@ -34,11 +34,11 @@ html
 				    // the user is logged in and has authenticated your
 				    // app, and response.authResponse supplies
 				    FB.api(
-				        "/238529783227920/picture",
+				        "/278642992549932/photos?fields=link,images,picture,height,width",
 				        function (response) {
 				          if (response && !response.error) {
 				            console.log(response);
-				            let $cover_pic = $("<img />", {"src":response.data.url});
+				            let $cover_pic = $("<img />", {"src":response.data[0].images[0].source});
 				          	$("body").append($cover_pic);
 				          }
 				      	  else {
