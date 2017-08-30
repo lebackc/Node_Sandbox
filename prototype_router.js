@@ -218,10 +218,18 @@ router.post("/sign_in", function(request, response){
 
 router.get("/jquery_demo", function(request, response){
 	response.render("jquery_demo");
-})
+});
 
-router.get("/FB_demo", function(request, response){
-	response.render("FB_demo");
-})
+router.get("/gallery", function(request, response){
+	response.render("gallery");
+});
+
+router.get("/gallery_selection", function(request, response){
+	response.render("gallery_selection");
+});
+
+router.get("/prototype_home", function(request, response){
+	response.render("prototype_home");
+});
 
 module.exports = router;
